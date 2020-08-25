@@ -1,0 +1,119 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sky {
+  background: url('/img/sky.jpg');
+  height: 100vh;
+  width: 500%;
+  animation: sky 60s linear infinite;
+}
+
+@keyframes sky {
+  100% {
+    transform: translateX(-1000px);
+  }
+}
+
+.building {
+  display: block;
+  background: url('/img/building.png');
+  height: 455px;
+  width: 1000%;
+  position: absolute;
+  bottom: 250px;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  animation: building 30s linear infinite;
+}
+
+@keyframes building {
+  100% {
+    transform: translateX(-1600px);
+  }
+}
+
+.road {
+  display: block;
+  background: url('/img/road.jpg');
+  height: 280px;
+  width: 500%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  animation: road 5s linear infinite;
+}
+
+@keyframes road {
+  100% {
+    transform: translateX(-3600px);
+  }
+}
+
+.truck {
+  position: absolute;
+  width: 500px;
+  left: 50%;
+  bottom: 75px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.truck img {
+  width: 100%;
+  animation: truck 1s linear infinite;
+}
+
+@keyframes truck {
+  0% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(1px);
+  }
+}
+
+.wheel {
+  left: 50%;
+  bottom: 222px;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 2;
+}
+
+.wheel img {
+  width: 100px;
+  height: 100px;
+  animation: wheel .8s linear infinite;
+}
+
+@keyframes wheel {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.first-wheel {
+  left: -202px;
+  position: absolute;
+}
+
+.second-wheel {
+  left: 95px;
+  position: absolute;
+}
+
